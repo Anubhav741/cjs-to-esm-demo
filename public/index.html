@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Try @anubhav741/cjs_esm. Edit a CommonJS module and see the converted ES module in your browser."
+    />
+    <meta name="theme-color" content="#f6f7f2" />
+    <title>CommonJS to ESM · Module Lab</title>
+    <link rel="icon" href="./mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./playground.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap nav">
+        <a class="brand" href="./"
+          ><img src="./mark.svg" alt="" width="34" height="34" />Module Lab</a
+        >
+        <a class="repo" href="https://github.com/Anubhav741/cjs-to-esm-demo"
+          >View on GitHub</a
+        >
+      </div>
+    </header>
+    <main class="wrap">
+      <h1>CommonJS <span class="to">to</span> ESM</h1>
+      <p class="intro">
+        Edit a CommonJS module and see its ES module output as you type.
+      </p>
+      <section class="workbench" aria-label="Conversion playground">
+        <div class="toolbar">
+          <div class="examples">
+            <label for="example">Example</label>
+            <select id="example">
+              <option value="paths">Path utilities</option>
+              <option value="defaults">Default export</option>
+              <option value="named">Named imports</option>
+              <option value="custom" hidden>Custom code</option>
+            </select>
+          </div>
+          <span class="status" id="status" role="status">Loading package…</span>
+        </div>
+        <div class="editors">
+          <section class="pane" aria-label="CommonJS input">
+            <div class="pane-head">
+              <label class="file" for="source"
+                ><i aria-hidden="true">C</i>input.cjs</label
+              ><span class="kind">CommonJS</span>
+            </div>
+            <div class="codearea">
+              <pre class="gutter" id="input-lines" aria-hidden="true"></pre>
+              <textarea
+                id="source"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+                wrap="off"
+                aria-label="CommonJS source code"
+              ></textarea>
+            </div>
+          </section>
+          <section class="pane result" aria-label="ES module output">
+            <div class="pane-head">
+              <span class="file"><i aria-hidden="true">E</i>output.mjs</span
+              ><button type="button" id="copy" disabled>Copy output</button>
+            </div>
+            <div class="codearea">
+              <pre class="gutter" id="output-lines" aria-hidden="true"></pre>
+              <pre
+                class="output"
+                id="output"
+                tabindex="0"
+                aria-label="Converted ES module"
+              ></pre>
+            </div>
+          </section>
+        </div>
+      </section>
+      <noscript
+        >Enable JavaScript to run the converter in your browser.</noscript
+      >
+      <section class="install" aria-labelledby="install-title">
+        <div>
+          <h2 id="install-title">Use the package</h2>
+          <a href="https://www.npmjs.com/package/@anubhav741/cjs_esm"
+            >@anubhav741/cjs_esm on npm</a
+          >
+        </div>
+        <pre><span aria-hidden="true">$ </span><code>npm install @anubhav741/cjs_esm</code></pre>
+      </section>
+    </main>
+  </body>
+</html>

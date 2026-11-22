@@ -1,0 +1,18 @@
+{
+  "name": "cjs-to-esm-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive demo of @anubhav741/cjs_esm.",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --serve"
+  },
+  "dependencies": {
+    "@anubhav741/cjs_esm": "0.1.4"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "os-browserify": "0.3.0"
+  }
+}
